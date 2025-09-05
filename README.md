@@ -1,2 +1,11 @@
-# Nextgen-solutionhub
-NextGen Solution Hub — a curated platform offering innovative tools, resources, and modern solutions to help entrepreneurs and businesses grow in the digital age.
+# NextGen Solution Hub 🌐
+
+Welcome to **NextGen Solution Hub** — an upcoming platform offering innovative tools, curated resources, and modern solutions for entrepreneurs, creators, and businesses worldwide.  
+
+## 🚀 Features
+- **Coming Soon Page** with professional design  
+- **Newsletter Signup** powered by [Formspree](https://formspree.io/)  
+- **Contact Section** for inquiries and partnerships  
+- **Custom Branding** with logo + favicon  
+
+## 📂 Project Structure
