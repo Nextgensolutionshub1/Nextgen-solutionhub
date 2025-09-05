@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextGen Solution Hub</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9fafb;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background: #2563eb;
+      color: white;
+      padding: 3rem 1rem;
+    }
+    header img {
+      max-width: 140px;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+    .container {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: white;
+      background: #2563eb;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+      margin-top: 1rem;
+    }
+    .btn:hover {
+      background: #1e40af;
+    }
+    .mission {
+      background: #ffffff;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .mission h2 {
+      margin-bottom: 1rem;
+    }
+    .mission p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .newsletter {
+      background: #f1f5f9;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .newsletter h2 {
+      margin-bottom: 1rem;
+    }
+    .newsletter p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .newsletter input[type="email"] {
+      padding: 0.7rem;
+      width: 70%;
+      max-width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-right: 0.5rem;
+    }
+    .newsletter button {
+      padding: 0.7rem 1.2rem;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .newsletter button:hover {
+      background: #1e40af;
+    }
+    .thank-you {
+      display: none;
+      margin-top: 1rem;
+      color: green;
+      font-weight: bold;
+    }
+    .contact {
+      background: #eef2ff;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      border-radius: 10px;
+    }
+    .contact h2 {
+      margin-bottom: 1rem;
+    }
+    .contact p {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="NextGen Solution Hub Logo">
+    <h1>NextGen Solution Hub</h1>
+    <p>Innovative tools and resources for modern businesses.</p>
+  </header>
+  <div class="container">
+    <h2>Coming Soon</h2>
+    <p>We’re building a curated hub of the best software, platforms, and solutions for entrepreneurs, creators, and businesses worldwide.  
+    Stay tuned as we bring you our top recommendations!</p>
+    <a href="#" class="btn">Check Back Soon</a>
+  </div>
+  <div class="container mission">
+    <h2>Our Mission</h2>
+    <p>
+      At NextGen Solution Hub, our mission is to connect entrepreneurs, startups, and businesses with the tools and platforms they need to succeed in the digital age.  
+      We believe in simplifying technology, empowering innovation, and helping our community grow with solutions that are efficient, reliable, and future-ready.
+    </p>
+  </div>
+  <div class="container newsletter">
+    <h2>Join Our Newsletter</h2>
+    <p>Subscribe to stay updated with the latest tools, resources, and business insights.</p>
+    <form id="newsletter-form" action="https://formspree.io/f/xdklpjda" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <div class="thank-you">✅ Thank you for subscribing! You’ll hear from us soon.</div>
+  </div>
+  <div class="container contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or partnership inquiries?</p>
+    <p>Email us at: <a href="mailto:solutionhubnextgen@gmail.com">solutionhubnextgen@gmail.com</a></p>
+  </div>
+  <footer>
+    <p>© 2025 NextGen Solution Hub | All Rights Reserved</p>
+  </footer>
+  <script>
+    const form = document.getElementById("newsletter-form");
+    const thankYou = document.querySelector(".thank-you");
+    form.addEventListener("submit", async function(event) {
+      event.preventDefault();
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        form.reset();
+        thankYou.style.display = "block";
+      } else {
+        alert("Oops! Something went wrong. Please try again.");
+      }
+    });
+  </script>
+</body>
+</html>
